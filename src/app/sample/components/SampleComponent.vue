@@ -1,9 +1,13 @@
 <template>
   <div>
-    <h1>{{sample.message}}</h1>
-    <p>
-      <a href="/user-login">Second Module</a>
-    </p>
+    <b-card tag="article"
+            style="max-width: 100%;"
+            class="mb-2">
+      <p class="card-text">
+        {{sample.message}}
+      </p>
+      <b-button href="/user-login" variant="primary">Second Module</b-button>
+    </b-card>
   </div>
 </template>
 

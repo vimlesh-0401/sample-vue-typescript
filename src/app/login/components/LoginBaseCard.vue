@@ -1,10 +1,23 @@
 <template>
   <div>
-    <h2> {{name}} </h2>
-    <h2>{{email}}</h2>
-    <p>
-      <a href="/sample-component">First Module</a>
-    </p>
+    <b-card class="mb-2">
+      <b-form>
+        <b-row class="my-1">
+          <b-col sm="3"><label for="type-email">User Name</label></b-col>
+          <b-col sm="9"><b-form-input :value="email" id="type-email" type="text" disabled></b-form-input></b-col>
+        </b-row>
+        <b-row class="my-1">
+          <b-col sm="3"><label for="type-password">Password</label></b-col>
+          <b-col sm="9"><b-form-input v-model="password" id="type-password" placeholder="*************" type="password"></b-form-input></b-col>
+        </b-row>
+        <b-row class="my-1">
+          <b-col sm="12">
+            <br/>
+            <b-button size="sm" variant="secondary">Login</b-button>
+          </b-col>
+        </b-row>
+      </b-form>
+    </b-card>
   </div>
 </template>
 
@@ -20,6 +33,13 @@
     @State('login') private login!: LoginState;
     @Action('fetchData', {namespace}) private fetchData: any;
     @Getter('userEmail', {namespace}) private userEmail!: string;
+
+    private data() {
+      return {
+        username: '',
+        password: '',
+      };
+    }
 
     private mounted() {
       this.fetchData();

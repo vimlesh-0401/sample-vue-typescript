@@ -1,4 +1,4 @@
-# sqresponsive
+# Sample vue-typescript application
 
 ## Project setup
 ```

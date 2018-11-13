@@ -8,9 +8,6 @@ module.exports = {
       alias: {
         '@': `${projectRoot}/src`,
         '~': `${projectRoot}/src/assets`,
-        '@img': `${projectRoot}/src/assets/images`,
-        '@comp': `${projectRoot}/src/components`,
-        '@views': `${projectRoot}/src/views`,
         'HTTP': `${projectRoot}/src/http`,
       }
     },

@@ -8,10 +8,11 @@
         </b-row>
         <b-row class="my-1">
           <b-col sm="3"><label for="type-password">Password</label></b-col>
-          <b-col sm="9"><b-form-input v-model="password" id="type-password" type="password"></b-form-input></b-col>
+          <b-col sm="9"><b-form-input v-model="password" id="type-password" placeholder="*************" type="password"></b-form-input></b-col>
         </b-row>
         <b-row class="my-1">
           <b-col sm="12">
+            <br/>
             <b-button size="sm" variant="secondary">Login</b-button>
           </b-col>
         </b-row>

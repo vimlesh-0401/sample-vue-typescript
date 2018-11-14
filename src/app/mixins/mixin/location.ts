@@ -8,7 +8,8 @@ export class Location extends Vue {
   @State('mixins') private location!: LocationState;
   @Action('locationData', {namespace: 'mixins'}) private locationData: any;
   @Getter('list', {namespace: 'mixins'}) private list: any;
-
+  @Getter('sliderList', {namespace: 'mixins'}) private sliderList: any;
+  
   private created() {
     this.locationData();
   }

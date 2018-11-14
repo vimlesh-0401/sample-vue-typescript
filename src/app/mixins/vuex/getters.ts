@@ -8,4 +8,19 @@ export const getters: GetterTree<LocationState, RootState> = {
       return { name: l.name, capital: l.capital, population: l.population, region: l.region };
     });
   },
+  sliderList(state): any {
+    return state && state.list.map((l: any) => {
+      return {
+        name: l.name,
+        flag: l.flag,
+        info: {
+          capital: l.capital,
+          population: l.population,
+          region: l.region,
+          languages: l.languages.map((l: any) => l.name).join(', '),
+          nativeName: l.nativeName,
+        },
+      };
+    });
+  }
 };

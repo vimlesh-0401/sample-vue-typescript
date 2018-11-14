@@ -4,7 +4,7 @@
       <b-form>
         <b-row class="my-1">
           <b-col sm="3"><label for="type-email">User Name</label></b-col>
-          <b-col sm="9"><b-form-input :value="email" id="type-email" type="text" disabled></b-form-input></b-col>
+          <b-col sm="9"><b-form-input :value="email" id="type-email" type="text" placeholder="Your email" disabled></b-form-input></b-col>
         </b-row>
         <b-row class="my-1">
           <b-col sm="3"><label for="type-password">Password</label></b-col>

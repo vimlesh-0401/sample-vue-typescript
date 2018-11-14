@@ -9,7 +9,7 @@ export class Location extends Vue {
   @Action('locationData', {namespace: 'mixins'}) private locationData: any;
   @Getter('list', {namespace: 'mixins'}) private list: any;
   @Getter('sliderList', {namespace: 'mixins'}) private sliderList: any;
-  
+
   private created() {
     this.locationData();
   }

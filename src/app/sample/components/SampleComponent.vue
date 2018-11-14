@@ -58,11 +58,11 @@
     private mounted() {
       this.sampleData();
     }
-    onSlideStart (slide: any) {
-      console.log('Slide Start: '+slide);
+    private onSlideStart(slide: any) {
+      console.log('Slide Start: ' + slide);
     }
-    onSlideEnd (slide: any) {
-      console.log('Slide End: '+slide);
+    private onSlideEnd(slide: any) {
+      console.log('Slide End: ' + slide);
     }
   }
 </script>

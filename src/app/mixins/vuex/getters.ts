@@ -17,10 +17,10 @@ export const getters: GetterTree<LocationState, RootState> = {
           capital: l.capital,
           population: l.population,
           region: l.region,
-          languages: l.languages.map((l: any) => l.name).join(', '),
+          languages: l.languages.map((lang: any) => lang.name).join(', '),
           nativeName: l.nativeName,
         },
       };
     });
-  }
+  },
 };

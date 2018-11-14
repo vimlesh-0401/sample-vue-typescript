@@ -4,7 +4,7 @@
             style="max-width: 100%;"
             class="mb-2">
       <p class="card-text">
-        {{sample.message}}
+        {{message}}
       </p>
       <b-button href="/user-login" variant="primary">Second Module</b-button>
     </b-card>
@@ -22,6 +22,7 @@
   export default class SampleComponent extends Vue {
     @Action('sampleData', {namespace}) private sampleData: any;
     @State('sample') private sample!: SampleState;
+    @Getter('message', {namespace}) private message!: string;
 
     private mounted() {
       this.sampleData();

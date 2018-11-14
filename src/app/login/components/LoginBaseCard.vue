@@ -32,7 +32,8 @@
   export default class LoginBaseCard extends Vue {
     @State('login') private login!: LoginState;
     @Action('fetchData', {namespace}) private fetchData: any;
-    @Getter('userEmail', {namespace}) private userEmail!: string;
+    @Getter('name', {namespace}) private name!: string;
+    @Getter('email', {namespace}) private email!: string;
 
     private data() {
       return {
@@ -43,16 +44,6 @@
 
     private mounted() {
       this.fetchData();
-    }
-
-    get email() {
-      const user = this.login && this.login.user;
-      return user && user.email;
-    }
-
-    get name() {
-      const user = this.login && this.login.user;
-      return user && user.name;
     }
   }
 </script>

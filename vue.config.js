@@ -8,7 +8,7 @@ module.exports = {
       alias: {
         '@': `${projectRoot}/src`,
         '~': `${projectRoot}/src/assets`,
-        'HTTP': `${projectRoot}/src/http`,
+        'HTTP': `${projectRoot}/src`,
       }
     },
     devServer: {

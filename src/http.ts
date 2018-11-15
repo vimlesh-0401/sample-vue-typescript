@@ -1,14 +1,12 @@
 import axios from 'axios';
-/**
- * Move these configurations to evn specific files.
- */
+
 const config = {
   NODE_ENV: process.env.NODE_ENV,
-  BASE_URL: process.env.baseURL,
+  BASE_URL: process.env.VUE_APP_BASE_URL,
   CLIENT: {
-    scope: '"user"',
-    client_id: process.env.client_id,
-    client_secret: process.env.client_secret,
+    SCOPE: process.env.VUE_APP_SCOPE,
+    CLIENT_ID: process.env.VUE_APP_CLIENT_ID,
+    CLIENT_SECRET: process.env.VUE_APP_CLIENT_SECRET,
   },
 };
 

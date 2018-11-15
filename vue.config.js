@@ -13,6 +13,17 @@ module.exports = {
     },
     devServer: {
       // open: true,
+      setup: (app, server) => {
+        //Write custom handler.
+      },
+      before: (app, server) => {
+        // app.get('/api/status', (request, response) => {
+        // })
+      },
+      overlay: {
+        warnings: true,
+        errors: true,
+      },
     }
   }
 }

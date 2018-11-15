@@ -1,6 +1,12 @@
 {
-  "name": "sample",
-  "version": "0.1.0",
+  "name": "sample-vue-typescript",
+  "version": "1.0.0",
+  "description": "Sample project using typescript and bootstrap with vue",
+  "author": {
+    "name": "Vimlesh Patel",
+    "email": "vimlesh.0401@gmail.com",
+    "url": "https://github.com/vimlesh-0401/sample-vue-typescript"
+  },
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",

@@ -40,12 +40,12 @@
   import Component from 'vue-class-component';
   import { State, Action, Getter } from 'vuex-class';
   import { SampleState } from '../vuex/types';
-  import { Location } from '@/app/mixins/mixin/location';
+  import { LocationMixin } from '@/app/mixins';
   import { Mixins } from 'vue-mixin-decorator';
   const namespace: string = 'sample';
 
   @Component
-  export default class SampleComponent extends Mixins<Location>(Location) {
+  export default class SampleComponent extends Mixins<LocationMixin>(LocationMixin) {
     @Action('sampleData', {namespace}) private sampleData: any;
     @State('sample') private sample!: SampleState;
     @Getter('message', {namespace}) private message!: string;

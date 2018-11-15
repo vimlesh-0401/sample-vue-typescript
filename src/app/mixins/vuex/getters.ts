@@ -1,15 +1,17 @@
 import { GetterTree } from 'vuex';
-import { LocationState } from './types';
+import { MixinState } from './types';
 import { RootState } from '../../types';
 
-export const getters: GetterTree<LocationState, RootState> = {
+export const getters: GetterTree<MixinState, RootState> = {
   list(state): any {
-    return state && state.list.map((l: any) => {
+    const { location } = state;
+    return location && location.list.map((l: any) => {
       return { name: l.name, capital: l.capital, population: l.population, region: l.region };
     });
   },
   sliderList(state): any {
-    return state && state.list.map((l: any) => {
+    const {location} = state;
+    return location && location.list.map((l: any) => {
       return {
         name: l.name,
         flag: l.flag,

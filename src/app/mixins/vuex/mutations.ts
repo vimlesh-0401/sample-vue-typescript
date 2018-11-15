@@ -1,14 +1,14 @@
 import { MutationTree } from 'vuex';
-import { LocationState } from './types';
+import { MixinState, LocationState } from './types';
 
-export const mutations: MutationTree<LocationState> = {
+export const mutations: MutationTree<MixinState> = {
   sampleLocationLoaded(state, payload: any) {
-    state.list = payload;
-    state.error = false;
+    const location: LocationState = {list: payload, error: false};
+    state.location = location;
   },
 
   locationError(state) {
-    state.error = true;
-    state.list = [];
+    const location: LocationState = {list: [], error: true};
+    state.location = location;
   },
 };

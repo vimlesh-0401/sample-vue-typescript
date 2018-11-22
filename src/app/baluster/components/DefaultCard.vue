@@ -9,9 +9,5 @@
   import Vue from 'vue';
   
   @Component
-  export default class DefaultCard extends Vue {
-    public created() {
-      console.log('default created.');
-    }
-  }
+  export default class DefaultCard extends Vue {}
 </script>

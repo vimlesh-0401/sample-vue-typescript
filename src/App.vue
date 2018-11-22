@@ -5,8 +5,8 @@
       <b-navbar-brand href="#">Sample App</b-navbar-brand>
       <b-collapse is-nav id="nav_collapse">
         <b-navbar-nav>
-          <b-nav-item href="/sample-component">First Module</b-nav-item>
-          <b-nav-item href="/user-login">Second Module</b-nav-item>
+          <b-nav-item href="/sample-component">Sample Component</b-nav-item>
+          <b-nav-item href="/user-login">Login Component</b-nav-item>
         </b-navbar-nav>
       </b-collapse>
     </b-navbar>

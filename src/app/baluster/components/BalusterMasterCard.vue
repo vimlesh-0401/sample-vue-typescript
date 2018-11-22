@@ -13,7 +13,7 @@
   @Component
   export default class BalusterMasterCard extends Vue {
     public created() {
-      console.log('creating....');
+      console.log('base baluster card....');
     }
   }
 </script>

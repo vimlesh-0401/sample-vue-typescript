@@ -18,6 +18,11 @@
         </b-row>
       </b-form>
     </b-card>
+    <b-card :title="quote.author" :sub-title="quote.category">
+      <p class="card-text">
+        {{quote.quote}}
+      </p>
+    </b-card>
   </div>
 </template>
 
@@ -26,10 +31,13 @@
   import Vue from 'vue';
   import { State, Action, Getter } from 'vuex-class';
   import { LoginState, User} from '../vuex/types';
+  import { FeedCardMixin } from '@/app/mixins';
+  import { Mixins } from 'vue-mixin-decorator';
+
   const namespace: string = 'login';
 
   @Component
-  export default class LoginBaseCard extends Vue {
+  export default class LoginBaseCard extends Mixins<FeedCardMixin>(FeedCardMixin) {
     @State('login') private login!: LoginState;
     @Action('fetchData', {namespace}) private fetchData: any;
     @Getter('name', {namespace}) private name!: string;

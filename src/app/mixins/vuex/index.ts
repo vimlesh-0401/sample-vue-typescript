@@ -4,16 +4,19 @@ import { actions } from './actions';
 import { mutations  } from './mutations';
 
 import { RootState } from '../../types';
-import { LocationState } from './types';
+import { MixinState } from './types';
 
-export const state: LocationState = {
-  list: [],
-  error: false,
+export const state: MixinState = {
+  feed: undefined,
+  quote: undefined,
+  country: undefined,
+  countries: [],
+  feeds: [],
 };
 
 const namespaced: boolean = true;
 
-export const location: Module<LocationState, RootState> = {
+export const location: Module<MixinState, RootState> = {
   namespaced,
   state,
   getters,

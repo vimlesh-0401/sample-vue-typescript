@@ -11,7 +11,7 @@ module.exports = {
       }
     },
     devServer: {
-      // open: true,
+      open: true,
       setup: (app, server) => {
         const CONFIG_CHECKS = ['VUE_APP_CLIENT_ID', 'VUE_APP_CLIENT_SECRET', 'VUE_APP_BASE_URL', 'VUE_APP_SCOPE' ];
 

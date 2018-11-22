@@ -18,7 +18,7 @@
         @sliding-end="onSlideEnd"
       >
         <b-carousel-slide v-for="country in sliderList"
-          :key="country.name"
+          :key="country.area"
           :caption="country.name"
           img-blank :img-alt="country.name"
         >
@@ -31,6 +31,9 @@
         <template slot="table-caption">
           Countries list
         </template>
+        <template slot="flag" slot-scope="row">
+          <img height="30px" :src="row.value"/>
+        </template>
       </b-table>
     </b-card>
   </div>
@@ -40,12 +43,12 @@
   import Component from 'vue-class-component';
   import { State, Action, Getter } from 'vuex-class';
   import { SampleState } from '../vuex/types';
-  import { Location } from '@/app/mixins/mixin/location';
+  import { LocationMixin } from '@/app/mixins';
   import { Mixins } from 'vue-mixin-decorator';
   const namespace: string = 'sample';
 
   @Component
-  export default class SampleComponent extends Mixins<Location>(Location) {
+  export default class SampleComponent extends Mixins<LocationMixin>(LocationMixin) {
     @Action('sampleData', {namespace}) private sampleData: any;
     @State('sample') private sample!: SampleState;
     @Getter('message', {namespace}) private message!: string;

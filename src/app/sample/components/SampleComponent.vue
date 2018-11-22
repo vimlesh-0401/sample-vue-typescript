@@ -18,7 +18,7 @@
         @sliding-end="onSlideEnd"
       >
         <b-carousel-slide v-for="country in sliderList"
-          :key="country.name"
+          :key="country.area"
           :caption="country.name"
           img-blank :img-alt="country.name"
         >
@@ -30,6 +30,9 @@
       <b-table stacked :items="list" caption-top>
         <template slot="table-caption">
           Countries list
+        </template>
+        <template slot="flag" slot-scope="row">
+          <img height="30px" :src="row.value"/>
         </template>
       </b-table>
     </b-card>

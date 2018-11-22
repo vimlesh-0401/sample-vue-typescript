@@ -7,9 +7,10 @@ import { RootState } from '../../types';
 import { MixinState } from './types';
 
 export const state: MixinState = {
-  location: undefined,
   feed: undefined,
-  locations: [],
+  quote: undefined,
+  country: undefined,
+  countries: [],
   feeds: [],
 };
 

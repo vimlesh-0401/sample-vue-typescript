@@ -6,6 +6,13 @@ export const api = {
   },
 
   getFeeds() {
-    return HTTP.get('http://www.flickr.com/services/feeds/photos_public.gne?tags=soccer', { responseType: 'json'});
+    return HTTP.get(
+      'http://quotesondesign.com//wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1',
+    );
+  },
+  getQuote() {
+    return HTTP.get(
+      'https://talaikis.com/api/quotes/random/',
+    );
   },
 };

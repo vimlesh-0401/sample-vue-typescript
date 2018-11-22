@@ -10,8 +10,13 @@ export const actions: ActionTree<MixinState, RootState> = {
   },
 
   feedData({commit}): any {
-    api.getFeeds().then((response: any) => {
-      console.log(response);
+    return api.getFeeds().then((response: any) => {
+      commit('sampleFeedsLoaded', response.data);
+    });
+  },
+  quoteData({commit}): any {
+    return api.getQuote().then((response) => {
+      commit('sampleQuoteLoaded', response.data);
     });
   },
 };

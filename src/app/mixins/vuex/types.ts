@@ -1,16 +1,30 @@
-export interface LocationState {
-  list: any;
-  error: boolean;
+export interface CountryState {
+  name: string;
+  flag: string;
+  capital: string;
+  population: string;
+  region: string;
+  languages: string[];
+  nativeName: string;
+  area: number;
 }
 
 export interface FeedState {
-  error: boolean;
-  feed: any;
+  id: number;
+  title: string;
+  content: string;
+}
+
+export interface QuoteState {
+  author: string;
+  category: string;
+  quote: string;
 }
 
 export interface MixinState {
-  location?: LocationState;
-  locations: LocationState[];
+  country?: CountryState;
+  countries: CountryState[];
   feed?: FeedState;
   feeds: FeedState[];
+  quote?: QuoteState;
 }

@@ -18,6 +18,11 @@
         </b-row>
       </b-form>
     </b-card>
+    <b-card :title="quote.author" :sub-title="quote.category">
+      <p class="card-text">
+        {{quote.quote}}
+      </p>
+    </b-card>
   </div>
 </template>
 

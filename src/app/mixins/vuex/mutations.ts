@@ -3,7 +3,6 @@ import { MixinState, QuoteState, FeedState, CountryState } from './types';
 
 export const mutations: MutationTree<MixinState> = {
   sampleLocationLoaded(state, payload: any) {
-    console.log(payload);
     for (const c of payload) {
       const country: CountryState = {
         name: c.name,

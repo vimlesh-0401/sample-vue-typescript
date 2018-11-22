@@ -14,7 +14,7 @@ const router = new Router({
  * Configure pre request checks and router validations.
  * Access control.
  */
-router.beforeEach((to, from, next) => {
+router.beforeEach((to: any, from: any, next: any) => {
   next();
 });
 

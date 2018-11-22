@@ -6,7 +6,7 @@
       <p class="card-text">
         {{message}}
       </p>
-      <b-button href="/user-login" variant="primary">Second Module</b-button>
+      <b-button href="/user-login" variant="primary">Login Component</b-button>
     </b-card>
     <b-card tag="article" style="max-width: 100%" class="mb-2">
       <b-carousel id="carousel1"
@@ -47,7 +47,15 @@
   import { Mixins } from 'vue-mixin-decorator';
   const namespace: string = 'sample';
 
-  @Component
+  /**
+   * router callback wont be called if you define them inside component class.
+   * You need to register them before component resolve.
+   */
+  @Component({
+    beforeRouteEnter: (to, from , next) => {
+      next();
+    },
+  })
   export default class SampleComponent extends Mixins<LocationMixin>(LocationMixin) {
     @Action('sampleData', {namespace}) private sampleData: any;
     @State('sample') private sample!: SampleState;

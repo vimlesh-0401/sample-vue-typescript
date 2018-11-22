@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import Router from 'vue-router';
+import Router, { Route } from 'vue-router';
 import { routes } from './app';
 
 Vue.use(Router);
@@ -14,8 +14,16 @@ const router = new Router({
  * Configure pre request checks and router validations.
  * Access control.
  */
-router.beforeEach((to, from, next) => {
+router.beforeEach((to: Route, from: Route, next: any) => {
   next();
+});
+
+router.beforeResolve((to: Route, from: Route, next: any) => {
+  next();
+});
+
+router.afterEach((to: Route, from: Route) => {
+  // Here do something after everything is ready.
 });
 
 export default router;

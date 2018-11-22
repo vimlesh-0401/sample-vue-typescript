@@ -4,7 +4,6 @@ export default [
   {
     path: '/baluster',
     component: BalusterMasterCard,
-    name: 'baluster',
     children: [
       {
         path: '/',
@@ -13,6 +12,7 @@ export default [
           paramount: ParamountCard,
           pronouncement: PronouncementCard,
         },
+        name: 'baluster',
       },
     ],
   },

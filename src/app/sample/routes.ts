@@ -9,9 +9,11 @@ export default [
     beforeEnter: (to: Route, from: Route, next: any) => {
       next();
     },
+    meta: { changeRoot: true, menus: { baluster: true, login: true, sample: false } },
   },
   {
     path: '',
     component: SampleComponent,
+    redirect: '/sample-component',
   },
 ];

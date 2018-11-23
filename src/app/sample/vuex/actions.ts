@@ -6,6 +6,8 @@ export const actions: ActionTree<SampleState, RootState> = {
   sampleData({commit}): any {
     api.getMessage({}).then((response: any) => {
       commit('sampleDataLoaded', response.data.slip.advice);
+    }).catch((error) => {
+      commit('sampleError');
     });
   },
 };

@@ -19,9 +19,8 @@ export const actions: ActionTree<LoginState, RootState> = {
         userName: user.login.username,
       };
       commit('profileLoaded', u);
+    }).catch((error) => {
+      commit('profileError');
     });
-  },
-  userLogin({commit}): any {
-    return true;
   },
 };

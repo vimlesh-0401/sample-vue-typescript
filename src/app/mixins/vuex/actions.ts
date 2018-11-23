@@ -6,17 +6,23 @@ export const actions: ActionTree<MixinState, RootState> = {
   locationData({commit}): any {
     api.getLocation({}).then((response: any) => {
       commit('sampleLocationLoaded', response.data);
+    }).catch((error) => {
+      commit('locationError');
     });
   },
 
   feedData({commit}): any {
     return api.getFeeds().then((response: any) => {
       commit('sampleFeedsLoaded', response.data);
+    }).catch((error) => {
+      commit('sampleFeedsError');
     });
   },
   quoteData({commit}): any {
     return api.getQuote().then((response) => {
       commit('sampleQuoteLoaded', response.data);
+    }).catch((error) => {
+      commit('sampleQuoteError');
     });
   },
 };

@@ -1,6 +1,11 @@
 <template>
   <div>
-    <h4> <b>Paramount: </b> a long, sturdy piece of timber or metal set upright in the ground and used as a support or marker.</h4>
+    <b-card bg-variant="secondary"
+      text-variant="white"
+      header="Paramount"
+      class="text-center">
+      <p class="card-text">a long, sturdy piece of timber or metal set upright in the ground and used as a support or marker.</p>
+    </b-card>
   </div>
 </template>
 

@@ -7,6 +7,7 @@
         <b-navbar-nav>
           <b-nav-item href="/sample-component">Sample Component</b-nav-item>
           <b-nav-item href="/user-login">Login Component</b-nav-item>
+          <b-nav-item href="/user-login">Baluster</b-nav-item>
         </b-navbar-nav>
       </b-collapse>
     </b-navbar>

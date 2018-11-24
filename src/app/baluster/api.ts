@@ -10,6 +10,9 @@ export const api = {
   },
 
   fetchFact(num: number) {
-    return HTTP.get(`http://numbersapi.com/${num}`);
+    const date = new Date();
+    const day = date.getDate();
+    const month = date.getMonth() + 1;
+    return HTTP.get(`http://numbersapi.com/${month}/${day}/date`);
   },
 };

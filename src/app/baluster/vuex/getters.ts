@@ -7,4 +7,14 @@ export const getters: GetterTree<JambState, RootState> = {
     const {message} = state;
     return message;
   },
+
+  sampleJoke(state): string {
+    const {joke} = state;
+    return joke;
+  },
+
+  numberFact(state): string {
+    const {fact} = state;
+    return fact;
+  },
 };

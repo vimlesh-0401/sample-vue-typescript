@@ -9,6 +9,8 @@ import { JambState } from './types';
 export const state: JambState = {
   message: '',
   error: false,
+  joke: '',
+  fact: '',
 };
 
 const namespaced: boolean = true;

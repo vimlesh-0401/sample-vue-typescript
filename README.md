@@ -32,5 +32,5 @@
     ```
     npm run build
     ```
-  6. Visit [http://localhost:3000](http://localhost:3000/)
+  6. Visit [http://localhost:8080](http://localhost:8080/)
 

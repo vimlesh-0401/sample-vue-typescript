@@ -7,6 +7,7 @@ export const getters: GetterTree<MixinState, RootState> = {
     const { countries } = state;
     return countries.map((c) => c);
   },
+
   sliderList(state): any {
     const {countries} = state;
     return countries && countries.map((l: CountryState) => {

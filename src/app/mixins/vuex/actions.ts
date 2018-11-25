@@ -3,8 +3,9 @@ import { MixinState } from './types';
 import { RootState } from '@/app/types';
 import { api } from '../api';
 export const actions: ActionTree<MixinState, RootState> = {
+
   locationData({commit}): any {
-    api.getLocation({}).then((response: any) => {
+    return api.getLocation({}).then((response: any) => {
       commit('sampleLocationLoaded', response.data);
     }).catch((error) => {
       commit('locationError');
@@ -18,6 +19,7 @@ export const actions: ActionTree<MixinState, RootState> = {
       commit('sampleFeedsError');
     });
   },
+
   quoteData({commit}): any {
     return api.getQuote().then((response) => {
       commit('sampleQuoteLoaded', response.data);

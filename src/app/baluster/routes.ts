@@ -12,6 +12,7 @@ export default [
           paramount: ParamountCard,
           pronouncement: PronouncementCard,
         },
+        meta: { changeRoot: true, menus: { baluster: false, login: true, sample: true } },
         name: 'baluster',
       },
     ],

@@ -3,6 +3,7 @@ import { MixinState, QuoteState, FeedState, CountryState } from './types';
 
 export const mutations: MutationTree<MixinState> = {
   sampleLocationLoaded(state, payload: any) {
+    state.countries = [];
     for (const c of payload) {
       const country: CountryState = {
         name: c.name,
@@ -20,6 +21,7 @@ export const mutations: MutationTree<MixinState> = {
 
   locationError(state) {
     state.country = undefined;
+    state.countries = [];
   },
 
   sampleQuoteLoaded(state, payload: any) {
@@ -27,10 +29,20 @@ export const mutations: MutationTree<MixinState> = {
     state.quote = quote;
   },
 
+  sampleQuoteError(state) {
+    state.quote = undefined;
+  },
+
   sampleFeedsLoaded(state, payload: any) {
+    state.feeds = [];
     for (const f of payload) {
       const feed: FeedState = {id: f.ID, content: f.content, title: f.title};
       state.feeds.push(feed);
     }
+  },
+
+  sampleFeedsError(state) {
+    state.feed = undefined;
+    state.feeds = [];
   },
 };

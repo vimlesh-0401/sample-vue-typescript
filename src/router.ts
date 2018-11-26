@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import Router, { Route } from 'vue-router';
 import { routes } from './app';
+import store from './store';
 
 Vue.use(Router);
 
@@ -15,6 +16,9 @@ const router = new Router({
  * Access control.
  */
 router.beforeEach((to: Route, from: Route, next: any) => {
+  if (to.meta.changeRoot) {
+    store.dispatch('rootState/setDefaultState', to.meta.menus);
+  }
   next();
 });
 
